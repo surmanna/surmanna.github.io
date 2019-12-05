@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pl">
+<title>Moje Portfolio</title>
+<meta  name="author" content="Anna Surma">
+<meta itemprop="description"  property="og:description" name="descritpion" content="Moje Portfolio">
+<meta name="generator" content="">
+<meta name="facebook:card" content="">
+<meta itemprop="name" property="og:title" name="facebook:title" content="Portfolio Anna Surma">
+<meta name="facebook:description" content="Moje porfolio: Anna Surma">
+<meta property="og:type" content="website"/>
+<meta property="og:url" content=""/>
+<meta itemprop="datePublished" property="article:published_time" content="04/12/2019"/>
+<meta itemprop="dateModified" property="article:modified_time" content="04/12/2019"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+crossorigin="anonymous">
+<style>
+  @font-face {
+    font-family: hand;
+    src: url("./fonts/font.ttf");
+  }
+  .class_funny {
+    background: green;
+  }
+  .class_funny, .class_icon {
+    background: red;
+  }
+.class_icon {
+  background: blue;
+}
+
+  .typograf {
+    font-family: hand;
+    font-size: 1.4em;
+    font-weight: bold;
+
+    margin-left: -120%;
+    filter: blur(5px);
+    animation: typograf-fade-in 1.5s linear forwards;
+  }
+
+  .typograf-logo {
+    font-size: 3em !important;
+    font-weight: bold;
+  }
+
+  @keyframes typograf-fade-in {
+    from {
+      margin-left: -120%;
+      filter: blur(5px);
+    }
+
+    to {
+      margin-left: 0;
+      filter: blur(0);
+    }
+  }
+
+  body,
+  h1 {
+    font-family: "Montserrat", sans-serif
+  }
+
+  .w3-row img {
+    height: 100% !important;
+    filter: blur(2px);
+  }
+
+  img {
+    position: relative;
+    transition: all .15s;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    filter: blur(0);
+  }
+
+  .w3-third div {
+    overflow: hidden;
+  }
+
+  footer i {
+    padding: 10px 30px;
+    font-size: 1.5em !important;
+    cursor: pointer;
+  }
+
+  .w3-card-4 {
+    transition: all .25s;
+    transform: skewX(-15deg);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19), 14px 16px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .w3-card-4:hover {
+    transform: skewX(0);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19), 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .scroll-up-btn {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    height: 50px;
+    width: 50px;
+    z-index: 999;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.6em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    color: white;
+  }
+
+  .funny_me {
+    background-image: url('./images/2.jpg');
+    min-height: 600px;
+  }
+</style>
+
+<body>
+
+  <!-- Sidebar -->
+  <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+      class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Shop</a>
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+    </div>
+  </nav>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-content" style="max-width:1500px">
+
+    <!-- Header -->
+    <div class="w3-opacity">
+      <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+      <div class="w3-clear"></div>
+      <header class="w3-center w3-margin-bottom">
+        <h1 class="typograf-logo">PHOTOLIO</h1>
+        <p class="typograf">Anna Surma</p>
+        <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button>
+        </p>
+      </header>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="w3-row" id="myGrid" style="margin-bottom:64px">
+      <div class="w3-third">
+        <div><img src="./images/2.jpg" style="width:100%"></div>
+        <div><img src="./images/2.jpg" style="width:100%"></div>
+        <div><img src="./images/3.jpg" style="width:100%"></div>
+        <div><img src="./images/74956741_117214896385895_3888036509256777728_o.jpg" style="width:100%"></div>
+        <div><img src="./images/ja.jpg" style="width:100%"></div>
+        <div><img src="./images/76759973_124872232286828_6651670174061559808_o.jpg" style="width:100%"></div>
+        <!-- nie ma zdjecia-->
+      </div>
+
+      <div class="w3-third">
+        <div><img src="./images/74286082_119731332800918_7636564419085860864_o.jpg" style="width:100%"></div>
+        <div><img src="./images/74332269_124872292286822_6938457252223254528_o.jpg" style="width:100%"></div>
+        <div><img src="./images/74674497_124873762286675_5027828135630995456_o.jpg" style="width:100%"></div>
+        <div><img src="./images/4.jpg" style="width:100%"></div>
+        <div><img src="./images/75204566_117196563054395_8388638889404792832_o.jpg" style="width:100%"></div>
+      </div>
+
+      <div class="w3-third">
+        <div><img src="./images/75481869_124872395620145_5129274429938860032_o.jpg" style="width:100%"></div>
+        <div><img src="./images/75521870_117175736389811_1361899671038984192_o.jpg" style="width:100%"></div>
+        <div><img src="./images/75580472_119712822802769_5425406257425022976_o.jpg" style="width:100%"></div>
+        <div><img src="./images/76759973_124872232286828_6651670174061559808_o.jpg" style="width:100%"></div>
+        <div><img src="./images/78151583_124873412286710_3687566157641940992_o.jpg" style="width:100%"></div>
+        <div><img src="./images/75311715_124872272286824_5372233132076433408_o.jpg" style="width:100%"></div>
+        <!-- nie ma zdjęcia-->
+      </div>
+    </div>
+    <div class="w3-card-4">
+      <header class="w3-container w3-light-grey">
+        <h2>Anna Surma</h2>
+      </header>
+
+      <div class="w3-container" style="padding: 25px;">
+        <img src="./images/76759973_124872232286828_6651670174061559808_o.jpg" alt="Avatar"
+          class="w3-left w3-circle w3-margin"
+          style="width: 200px; height: 200px !important; object-fit: cover;box-shadow: 0 0 10px 2px black;">
+        <p class="w3-large" style="width: 85%; padding-left: 20%;">Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. In, modi veritatis expedita deserunt quam totam harum sit excepturi, explicabo repudiandae minima nam
+          vel quis incidunt aperiam porro. Illum, incidunt deserunt.
+          Sint ullam accusamus quidem, velit vero consectetur nesciunt reprehenderit nostrum tempora quod, sed hic
+          facilis. Minima odit culpa, quo at maxime commodi eaque? Cupiditate officia optio, quae amet quos laudantium?
+          Porro modi provident veniam eius quas sint. Corrupti veritatis magnam incidunt placeat ullam cum in, qui
+          blanditiis non eos, soluta doloribus voluptate id dicta numquam at repudiandae ipsa exercitationem quod.</p>
+      </div>
+      <table class="w3-table w3-bordered w3-centered">
+        <tr>
+          <th>Wiek</th>
+          <th>Biust</th>
+          <th>Talia</th>
+          <th>Biorda</th>
+        </tr>
+        <tr>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 pt-2"><img class="w-100" src="./images/2.jpg" ></div>
+            <div class="col-12 col-md-6 col-lg-4 pt-2"><img class="w-100" src="./images/2.jpg" ></div>
+            <div class="col-12 col-md-6 col-lg-4 pt-2"><img class="w-100" src="./images/2.jpg" ></div>
+        </div>
+        <div class="row d-md-none">
+            <div class="col-12 pt-2"><img class="w-100" src="./images/75481869_124872395620145_5129274429938860032_o.jpg" ></div>
+            <div class="col-12 pt-2"><img class="w-100" src="./images/75481869_124872395620145_5129274429938860032_o.jpg" ></div>
+            <div class="col-12 pt-2"><img class="w-100" src="./images/75481869_124872395620145_5129274429938860032_o.jpg" ></div>
+        </div>
+      </div>
+
+      <div class="row">
+          <a id="del_project" class="w-50 btn btn-success" href="javascript: void(0);">Delete First Project</a>
+          <a id="add_project" class="w-50 btn btn-success" href="javascript: void(0);">Add Project</a>
+      </div>
+      <table id="agency_table" class="table col-10 offset-1">
+          <thead>
+            <tr>
+              <th scope="col" class="table-active">#</th>
+              <th scope="col" class="table-secondary">Agencja</th>
+              <th scope="col" class="table-success">Rola</th>
+              <th scope="col" class="table-info">Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>SuperFoto</td>
+              <td>Fotomodelka</td>
+              <td>03/03/2017</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>UltraFoto</td>
+              <td>Fotomodelka</td>
+              <td>04/12/2018</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>TURBOFoto</td>
+              <td>Fotomodelka</td>
+              <td>17/08/2019</td>
+            </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                  <th scope="col" class="table-active">#</th>
+                  <th scope="col" class="table-secondary">First</th>
+                  <th scope="col" class="table-success">Last</th>
+                  <th scope="col" class="table-info">Handle</th>
+                </tr>
+          </tfoot>
+        </table>
+        <table class="table col-10 pt-3 offset-1">
+            <thead>
+              <tr>
+                <th scope="col" class="table-secondary">Agencja</th>
+                <th scope="col" class="table-success">Pracownicy</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <table class="table w-100">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="table-secondary">Nazwa</th>
+                          <th scope="col" class="table-success">Rok zał.</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="clickable_row">
+                          <td>TURBOFoto</td>
+                          <td>03/02/2015</td>
+                        </tr>
+                        <tr>
+                            <td>UltraFoto</td>
+                            <td>23/03/2007</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                <td>
+                  <table class="table w-100">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="table-secondary">Imię</th>
+                          <th scope="col" class="table-success">Nazwisko</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Jan</td>
+                          <td>Kowalski</td>
+                        </tr>
+                        <tr>
+                            <td>Janina</td>
+                            <td>Młotarska</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center">Janina Młotarska</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center">Janusz Młotarska</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="pt-3 px-2 col-10 offset-1">
+            <li>
+              Anna Surma
+              <ul>
+                  <li>+48 123456789</li>
+                  <li>+48 987654321</li>
+                  <li>+48 123123123</li>
+                </ul>
+            </li>
+            <li>
+                Jan Kowalski
+                <ul>
+                    <li>+48 223456789</li>
+                    <li>+48 887654321</li>
+                    <li>+48 223123123</li>
+                  </ul>
+            </li>
+          </ul>
+          <div class="row">
+            <div class="col-6 p-3 class_funny">
+                <div class="col-12 class_icon"></div>
+            </div>
+            <div class="col-6 class_icon"></div>
+            <div class="col-12 funny_me w-100 d-none d-lg-block"></div>
+
+          </div>
+  </div>
+  <!-- End Page Content -->
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </footer>
+  <div class="scroll-up-btn" onclick="toogle_scroll_btn()">
+    <i class="fa fa-arrow-up"></i>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+  crossorigin="anonymous"></script>
+  <script>
+    // Toggle grid padding
+    function myFunction() {
+      var x = document.getElementById("myGrid");
+      if (x.className === "w3-row") {
+        x.className = "w3-row-padding";
+      } else {
+        x.className = x.className.replace("w3-row-padding", "w3-row");
+      }
+    }
+
+    // Open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.width = "100%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+
+    function toogle_scroll_btn() {
+      $('html').animate({ scrollTop: 0 }, 700);
+        return false; 
+    }
+    $(document).ready(function() {
+      alert('hi!!');
+      $('.clickable_row').on('click', function() {
+        alert('you clicked me!');
+      });
+
+			$('#del_project').on('click', function() {
+				$("#agency_table > tbody > tr:first-child").remove();
+			});
+			$('#add_project').on('click', function() {
+				$("#agency_table > tbody:last").append(
+					'<tr><th scope="row">Kolejny</th><td>NoweFoto</td><td>Fotomodelka</td><td>Teraz</td></tr>');
+			});
+
+    });
+  </script>
+
+</body>
+
+</html>
